@@ -1,0 +1,32 @@
+body {
+  margin: 0 0 0 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  background-image: url("https://78.media.tumblr.com/tumblr_lk2sb47YSq1qj81xyo1_500.gif");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-color: teal;
+  
+}
+.submain{
+  
+  margin-top: 300px;
+  background-color: tan;
+  
+}
+.square {
+  opacity: .5;
+  margin: 0 .55%;
+  padding: 0%;
+  height: 25px;
+  width: 25px;
+}
+header {
+  background-color:aqua;
+  color: white;
+  text-shadow: 2px 2px tan,
+               -2px -2px tan;
+  line-height: 3px;
+}
+
