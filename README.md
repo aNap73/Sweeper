@@ -1,0 +1,2 @@
+# Sweeper
+Minesweeper lite
