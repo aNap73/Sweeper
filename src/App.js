@@ -77,7 +77,13 @@ class Board extends React.Component {
       const contents = this.state.contents.slice();
       const squares = this.state.squares.slice();
       if(this.state.viewstate==="gameover"){
-        this.setState({viewstate:"gameover2"});
+        let screh=this.state.highscore;
+        if(this.state.highscore<=this.state.score){
+          screh = this.state.score;
+        }
+        
+      
+        this.setState({highscore:screh, viewstate:"gameover2"});
       }
       if(this.state.viewstate==="gameover2"){
         
@@ -90,12 +96,8 @@ class Board extends React.Component {
       if(this.state.viewstate==="start"){
         const b = getBoardArray();
         
-        let screh=this.state.highscore;
-        if(this.state.highscore<=this.state.score){
-          screh = this.state.score;
-        }
+        
         this.setState({ 
-                        highscore:screh,
                         score: 0,
                         contents: b,
                         viewstate:"gameon"});        
