@@ -1,6 +1,8 @@
 # Ant Sweeper 
 #### Truly, now have I, set you up the bomb....
+
 ![SITEGIF](https://shielded-wildwood-17962.herokuapp.com/DaBomb.gif)
+
 Ant Sweeper is my take on an old game called Mine Sweeper. It seemed to fit this assignment well, and I've never coded it before. It was fun to back engineer this one from my memory of it's rules.
 
 [Live Site Here](https://shielded-wildwood-17962.herokuapp.com/)
