@@ -11,6 +11,7 @@ body {
   background: linear-gradient(rgb(170,170,170), rgb(255,255,255));
  
 }
+
 .submain{
   
   margin-top: 300px;
@@ -18,9 +19,12 @@ body {
   
 }
 .square {
-  
-  height: 25px;
-  width: 25px;
+  height: 10%;
+  width: 5%;
+  max-height: 55px;
+  max-width: 75px;
+  min-height: 25px;
+  min-width: 25px;
   background-color: blue;
   opacity: .7;
   font-size: .6em;

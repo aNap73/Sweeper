@@ -134,14 +134,16 @@ class Board extends React.Component {
 
   render() {
     let hiscre = 'High Score: '+ this.state.highscore;
-    let status = "unknown";
-    let clickit = "";
+    let status = "Can you beat the high score?";
+    let clickit = 'Click a button below to start!'
     switch(this.state.viewstate){
       case "start":
-      status = 'Press a button to start!'
+      
+      
       break;
       case "gameon":
       status = 'Your Score: ' + this.state.score.toString() + '';
+      clickit = "Numbers represent adjacent mines"; 
       break;
       case "gameover":
       status = 'Game Over Your Score was: ' + this.state.score.toString() + '!';
@@ -159,22 +161,35 @@ class Board extends React.Component {
     let contstyle = {};
     if(this.state.viewstate!=="gameon"&&this.state.viewstate!=="start"){
       contstyle = {backgroundImage: 'url("https://i.giphy.com/media/oe33xf3B50fsc/giphy.webp")', 
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      backgroundSize:  '100%',
-      padding: '0, 55%'}
+      'max-width': '15%',
+    
+      backgroundRepeat: 'no-repeat',    
+      backgroundPosition: 'contain',
+      'background-size':  '48% 120%',
+     
+      'min-width': '760px',
+      'margin' : 'auto',
+  
+    }
     }else{
       contstyle = {backgroundImage: 'url("https://i.giphy.com/media/WWYSFIZo4fsLC/giphy.webp")', 
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      backgroundSize:  '100%'}
-    }
+      'max-width': '15%',
     
+      backgroundRepeat: 'no-repeat',    
+      backgroundPosition: 'contain',
+      'background-size':  '48% 120%',
+     
+      'min-width': '760px',
+      'margin' : 'auto',
+    
+
+       
+    }
+  }    
     return (
       
       <div className="container maincont" style={contstyle}>
-      <div className="row">
-      <div className="col-5">
+      
         <div className="row">
           <div className="col-12">
             {hiscre}<br/>
@@ -316,9 +331,7 @@ class Board extends React.Component {
           {this.renderSquare(80)}
           
           </div>
-        </div>
-        </div>
-
+      
 
         </div>
         
