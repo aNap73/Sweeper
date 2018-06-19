@@ -59,21 +59,20 @@ Here's how I met the project goals:
 
 ##### The application should render different images (of your choice) to the screen. Each image should listen for click events.
 
-Each square checks for click events, and the game tracks four viewstates in it's state object, 'start','gameon','gameover1','gameover2'.
+Each square checks for click events, the click event handler on the squares changes a stateview variable, from start to gameon to gameover1 to gameover2 and back to start. When the setState from the click handler fires render, a different background is set depending on whether the game is "over".
 
-View States [start] and [gameover1] change the background image gif, after a square click event.
 
 ##### The application should keep track of the user's score. The user's score should be incremented when clicking an image for the first time. The user's score should be reset to 0 if they click the same image more than once.
 
-The application keeps track of score and high score in state. It does this by evaluating the viewstate state object and the data underneath the button you click also stored in a huge state array object. If the data is a number then you get a point, and the number is displayed. If the data is an X the game is over, your score is moved to highscore if it's greater than high score, and gameover1 viewstate is initialized.
+The application keeps track of score and high score in it's state. It does this by evaluating the viewstate state object and the data underneath the button you click, in a huge state array object. If the data is a number then you get a point, and the number is displayed. If the data is an X the game is over, your score is moved to highscore, if it's greater than high score, and a gameover viewstate is initialized.
 
 ##### Every time an image is clicked, the images rendered to the page should shuffle themselves in a random order.
 
-The game starts over and re-initializes the game board randomly, on either clicking reset or clicking twice after the game is completed.  There is an entire algorhythm that populates the bombs and number spaces that re-runs during this time. This ensures every game isn't the same. 
+The game starts over and re-initializes the game board randomly, on either clicking reset or clicking twice after the game is completed.  There is an entire algorhythm that populates the bombs and number spaces that re-runs during this time. This ensures every game isn't the same. This function is called getBoardArray in App.js. 
 
 ##### Once the user's score is reset after an incorrect guess, the game should restart.
 
-The game restarts after the user clicks on an X (bomb). If the user clicks twice more the game enter's it's [start]  viewstate and will take one more click to allow the user to begin play on the new board.
+The game restarts after the user clicks on an X (bomb). If the user clicks twice more the game enter's it's [start]  viewstate and will take one more click to allow the user to begin play on the new board using getBoardArray.
 
 ## What is Mine Sweeper
 
