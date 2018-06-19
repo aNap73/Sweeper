@@ -20,7 +20,7 @@ Click on any square in the play field to start the game.
 
 ![Fig2](https://raw.githubusercontent.com/aNap73/Sweeper/master/public/2.png)
 
-Now choose an square you wish to uncover remember we are looking to avoid mines the first one is always a guess thou so... (fingers crossed)!!! When you click an area, it shows you what was underneath. If it's an X that's a bomb and it's game over no points for you!
+Now choose a square you wish to uncover remember we are looking to avoid mines the first one is always a guess thou so... (fingers crossed)!!! When you click an area, it shows you what was underneath. If it's an X that's a bomb and it's game over no points for you!
 
 #### Step 3
 
