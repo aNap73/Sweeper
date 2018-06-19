@@ -29,7 +29,7 @@ ZERO means, we are clear all around the square with the ZERO in it, so we click 
 
 #### Step 4
 
-![Fig3](https://raw.githubusercontent.com/aNap73/Sweeper/master/public/3.png)
+![Fig3](https://raw.githubusercontent.com/aNap73/Sweeper/master/public/4.png)
 
 Keep going, every time you click a square and there's no bomb you get a point. You can get alot of points fast if you uncover zero squares. 
 
@@ -37,7 +37,7 @@ Keep going, every time you click a square and there's no bomb you get a point. Y
 
 #### Step 5
 
-![Fig3](https://raw.githubusercontent.com/aNap73/Sweeper/master/public/4.png)
+![Fig3](https://raw.githubusercontent.com/aNap73/Sweeper/master/public/3.png)
 
 When you hit an X it's game over and if you got the high score it will be saved. Simply click of squares in the playfield and the game will restart.  
 
