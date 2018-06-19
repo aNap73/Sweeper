@@ -43,7 +43,7 @@ Keep going, every time you click a square and there's no bomb you get a point. Y
 
 ![Fig3](https://raw.githubusercontent.com/aNap73/Sweeper/master/public/3.png)
 
-When you hit an X it's game over and if you got the high score it will be saved. Simply click of squares in the playfield and the game will restart with a completely new board and bomb placement!  
+When you hit an X it's game over and if you got the high score it will be saved. Simply click on squares in the playfield and the game will restart with a completely new board and bomb placement!  
 
 Good Luck!
 
