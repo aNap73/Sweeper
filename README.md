@@ -50,7 +50,7 @@ Good Luck!
 
 ![MatchGame](https://i.giphy.com/lgF6RKNGujVQY.gif)
 
-I wanted, to push myself, and honestly, the homework was a bit to simple to really learn about handling complex objects and states in react, or at least what I felt I needed to do. Therefore, I took to heart the concepts of the homework, and pushed it farther. I hope this is ok, I learned alot.
+I wanted/needed, to push myself, and honestly, the homework was a bit to simple for me. Therefore, I took to heart the concepts of the homework, distilled what I hope you were looking for and then pushed it farther. I hope this is ok, I learned alot.
 
 Here's how I met the project goals:
 
