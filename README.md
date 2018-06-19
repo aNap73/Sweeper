@@ -80,7 +80,7 @@ It has a few differences. It had a timer, and it had levels. I could implement t
 
 ## Bomb Algorhythm
 
-![BombsAway](https://media.giphy.com/media/Mliueouehmpag/giphy.webp)
+![BombsAway](https://78.media.tumblr.com/e4f99ef7ef7f658eb15fb8f5f97e1bf4/tumblr_nlyh5eTUBX1sa11jco1_540.gif)
 
 This part is the pretty cool part, in my opinion. The way the bombs and numbers are generated is as follows.  The grid is 9 by 9 so there are 81 squares.  Step 1 is to distribute the bombs randomly.  Step 2 is to go square by square, ignoring bomb squares. In each square you count all the bombs in the adjacent squares to get the number for that square. Currently, the first and last few squares aren't smart enough to count all their adjacent squares. It's a feature... :P I honestly, could fix it, but it makes the game a bit harder than the original and I like that.  If you've read this far... you should easily get high score now... 
 
