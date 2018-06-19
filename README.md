@@ -95,6 +95,6 @@ Step 2 is to map all non X squares, to the value of the count of adjacent bombs.
 
 Bug/Feature!
 
-Currently, the first and last few squares aren't smart enough to count all their adjacent squares as there is no -10,-9 or -8 at i position 0 etc, and the same for position 80 +1, +8 etc... However, It's a feature!!!... :P I honestly, could fix it, but it makes the game a bit harder and different than the original and I like that.  And iff you've read this far... you should easily get a high score now than someone who hasn't! 
+Currently, the first and last few squares aren't smart enough to count all their adjacent squares as there is no -10,-9 or -8 at i position 0 etc, and the same for position 80 +1, +8 etc... However, It's a feature!!!... :P I honestly, could fix it, but it makes the game a bit harder and different than the original and I like that.  And iff you've read this far... you should easily get a higher score now than someone who hasn't read all this! Thus JUSTICE! 
 
 Good Luck and Enjoy!
