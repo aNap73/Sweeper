@@ -4,9 +4,11 @@ import './index.css';
 class Square extends React.Component {
   render() {
     return (
-      <button className="square" onClick={() => {this.props.onClick()}}>
-        {this.props.value}
-      </button>
+    
+      <div className="btn btn-primary square" onClick={() => {this.props.onClick()}}>
+        {(this.props.value==='')?' ': this.props.value}
+      </div>
+    
     );
   }
 }
@@ -63,6 +65,7 @@ class Board extends React.Component {
     const b = getBoardArray();
   
     this.state = {
+      highscore: 0,
       score: 0,
       viewstate:'start',
       contents: b,
@@ -86,7 +89,14 @@ class Board extends React.Component {
       }
       if(this.state.viewstate==="start"){
         const b = getBoardArray();
-        this.setState({ score: 0,
+        
+        let screh=this.state.highscore;
+        if(this.state.highscore<=this.state.score){
+          screh = this.state.score;
+        }
+        this.setState({ 
+                        highscore:screh,
+                        score: 0,
                         contents: b,
                         viewstate:"gameon"});        
       }
@@ -95,19 +105,19 @@ class Board extends React.Component {
         if(this.state.contents[i] === 'X'){
           squares[i] = 'X';
           return this.setState({squares:squares, viewstate:"gameover"});        
+        }            
+        if(squares[i]!==contents[i]){
+          if (contents[i] !== ''){
+            squares[i] = contents[i];
+            if(squares[i]!=='X'){
+              let scre = this.state.score;
+              scre++;
+              this.setState({score:scre, squares: squares})
+            }
+            }
         }
-      
-      
-      console.log(contents[i]);
-      if (contents[i] !== ''){
-        squares[i] = contents[i];
-        if(squares[i]!=='X'){
-          let scre = this.state.score;
-          scre++;
-          this.setState({score:scre})
-        }
-      }      
-      this.setState({squares: squares});
+              
+      // this.setState({});
     }}
       
   renderSquare(i) {
@@ -121,35 +131,57 @@ class Board extends React.Component {
   }
 
   render() {
+    let hiscre = 'High Score: '+ this.state.highscore;
     let status = "unknown";
+    let clickit = "";
     switch(this.state.viewstate){
       case "start":
       status = 'Press a button to start!'
       break;
       case "gameon":
-      status = 'Your Score: ' + this.state.score.toString();
+      status = 'Your Score: ' + this.state.score.toString() + '';
       break;
       case "gameover":
-      status = 'Your Score was: ' + this.state.score.toString() + '!';
+      status = 'Game Over Your Score was: ' + this.state.score.toString() + '!';
+      clickit = " Click a button to continue...";
       break;
       case "gameover2":
-      status = 'Your Score was: ' + this.state.score.toString() + '!';
+      status = 'Game Over Your Score was: ' + this.state.score.toString() + '!';
+      clickit = " Click a button to continue...";
       break;
       default:
       status = 'Press a button to start!'
-     
+      break;
     
     }
-  
-  
+    let contstyle = {};
+    if(this.state.viewstate!=="gameon"&&this.state.viewstate!=="start"){
+      contstyle = {backgroundImage: 'url("https://i.giphy.com/media/oe33xf3B50fsc/giphy.webp")', 
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize:  '100%',
+      padding: '0, 55%'}
+    }else{
+      contstyle = {backgroundImage: 'url("https://i.giphy.com/media/WWYSFIZo4fsLC/giphy.webp")', 
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize:  '100%'}
+    }
     
     return (
-      <div class="main">
-        <header class="header"><h1>ANT SWEEPER</h1>{status}</header>
-        
-        <div class="submain" className="status">
-        
-        <div className="board-row">
+      
+      <div className="container maincont" style={contstyle}>
+      <div className="row">
+      <div className="col-5">
+        <div className="row">
+          <div className="col-12">
+            {hiscre}<br/>
+            {status}<br/>
+            {clickit}
+          </div>
+        </div>
+        <div className="row">
+        <div className="col-12">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
           {this.renderSquare(2)}
@@ -159,13 +191,13 @@ class Board extends React.Component {
           {this.renderSquare(6)}
           {this.renderSquare(7)}
           {this.renderSquare(8)}
-          
+        </div>  
         </div>
-        <div className="board-row">
+        <div className="row">
+        <div className="col-12">
           {this.renderSquare(9)}
           {this.renderSquare(10)}
-          {this.renderSquare(11)}
-        
+          {this.renderSquare(11)}        
           {this.renderSquare(12)}
           {this.renderSquare(13)}
           {this.renderSquare(14)}
@@ -173,8 +205,10 @@ class Board extends React.Component {
           {this.renderSquare(15)}
           {this.renderSquare(16)}
           {this.renderSquare(17)}          
+          </div>
         </div>
-        <div className="board-row">
+        <div className="row">
+        <div className="col-12">
           {this.renderSquare(18)}
           {this.renderSquare(19)}
           {this.renderSquare(20)}
@@ -186,9 +220,10 @@ class Board extends React.Component {
           {this.renderSquare(24)}
           {this.renderSquare(25)}
           {this.renderSquare(26)}
-         
+          </div>
         </div>
-        <div className="board-row">
+        <div className="row">
+        <div className="col-12">
           {this.renderSquare(27)}
           {this.renderSquare(28)}
           {this.renderSquare(29)}
@@ -200,9 +235,10 @@ class Board extends React.Component {
           {this.renderSquare(33)}
           {this.renderSquare(34)}
           {this.renderSquare(35)}
-          
+          </div>
         </div>
-        <div className="board-row">
+        <div className="row">
+        <div className="col-12">
           {this.renderSquare(36)}
           {this.renderSquare(37)}
           {this.renderSquare(38)}
@@ -214,9 +250,10 @@ class Board extends React.Component {
           {this.renderSquare(42)}
           {this.renderSquare(43)}
           {this.renderSquare(44)}
-          
+          </div>
         </div>
-        <div className="board-row">
+        <div className="row">
+        <div className="col-12">
           {this.renderSquare(45)}
           {this.renderSquare(46)}
           {this.renderSquare(47)}
@@ -229,9 +266,10 @@ class Board extends React.Component {
           {this.renderSquare(52)}
           {this.renderSquare(53)}
           
-          
+          </div>
         </div>
-        <div className="board-row">
+        <div className="row">
+        <div className="col-12">
           {this.renderSquare(54)}
           {this.renderSquare(55)}
           {this.renderSquare(56)}
@@ -244,9 +282,10 @@ class Board extends React.Component {
           {this.renderSquare(61)}
           {this.renderSquare(62)}
           
-          
+          </div>
         </div>
-        <div className="board-row">
+        <div className="row">
+        <div className="col-12">
           {this.renderSquare(63)}
           {this.renderSquare(64)}
           {this.renderSquare(65)}
@@ -258,9 +297,10 @@ class Board extends React.Component {
           {this.renderSquare(69)}
           {this.renderSquare(70)}
           {this.renderSquare(71)}
-          
+          </div>
         </div>
-        <div className="board-row">
+        <div className="row">
+        <div className="col-12">
           {this.renderSquare(72)}
           {this.renderSquare(73)}
           {this.renderSquare(74)}
@@ -273,13 +313,17 @@ class Board extends React.Component {
           {this.renderSquare(79)}
           {this.renderSquare(80)}
           
-         
+          </div>
         </div>
-        <div className="board-row">
+        </div>
+
+
+        </div>
         
-        </div>
+        
       </div>
-      </div>
+    
+      
     );
   }
 }
@@ -287,15 +331,9 @@ class Board extends React.Component {
 class App extends React.Component {
   render() {
     return (
-      <div className="game">
-        <div className="game-board">
+      
           <Board />
-        </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
-      </div>
+      
     );
   }
 }

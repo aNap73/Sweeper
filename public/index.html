@@ -10,6 +10,7 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -22,10 +23,26 @@
     <title>Ants MineSweeper</title>
   </head>
   <body>
+      <nav class="navbar menunav">
+          <a class="navbar-brand" href="#"><div id="logopic">
+            <img src="./DaBomb.gif"/ style="height:50px; width:50px; margin: 2px">
+            
+            <H1 id="logoname" style="float:right;">Ant Sweeper</H1></div></a>
+         
+          <div class="mnu">
+            
+        
+          <a class="navlink mnuitm" {{{styleSavedLink}}} href="#" onClick="history.go(0)" style='margin-right: 10px' >Restart</a>
+          <a class="navlink mnuitm" {{{styleAboutLink}}} href="https://github.com/aNap73/GNewsDaily/blob/master/README.md">About</a>
+          
+          </div>
+          </nav>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+        <div id="root"></div>
+        
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
