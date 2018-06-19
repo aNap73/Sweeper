@@ -1,14 +1,13 @@
 # Ant Sweeper 
 #### Truly, now have I, set you up the bomb....
 ![SITEGIF](https://shielded-wildwood-17962.herokuapp.com/DaBomb.gif)
-
-
+Ant Sweeper is my take on an old game called Mine Sweeper. It seemed to fit this assignment well, and I've never coded it before. It was fun to back engineer this one from my memory of it's rules.
 
 [Live Site Here](https://shielded-wildwood-17962.herokuapp.com/)
 
 ## How to Play
 
-Ant Sweeper is my take on an old game called Mine Sweeper. It seemed to fit this assignment well, and I've never coded it before. It was fun to figure out.
+Follow these easy steps and you'll be an ant sweeper pro in no time.
 
 #### Step 1
 
@@ -20,7 +19,7 @@ Click on any square in the play field to start the game.
 
 ![Fig2](https://raw.githubusercontent.com/aNap73/Sweeper/master/public/2.png)
 
-Now choose a square you wish to uncover remember we are looking to avoid mines the first one is always a guess thou so... (fingers crossed)!!! When you click an area, it shows you what was underneath. If it's an X that's a bomb and it's game over no points for you!
+Now choose a square you wish to uncover, remember we are looking to avoid mines (X), the first place you pick thou is always a guess thou so... (fingers crossed)!!! Older games are famous for being unreasonable and rng based, I love it. When you click an area, it shows you what was underneath where you went ... a diggin. If it's an X that's a bomb and it's game over no points for you! See ya!
 
 #### Step 3
 
@@ -42,7 +41,7 @@ Keep going, every time you click a square and there's no bomb you get a point. Y
 
 ![Fig3](https://raw.githubusercontent.com/aNap73/Sweeper/master/public/3.png)
 
-When you hit an X it's game over and if you got the high score it will be saved. Simply click of squares in the playfield and the game will restart.  
+When you hit an X it's game over and if you got the high score it will be saved. Simply click of squares in the playfield and the game will restart with a completely new board and bomb placement!  
 
 Good Luck!
 
@@ -50,7 +49,7 @@ Good Luck!
 
 ![MatchGame](https://i.giphy.com/lgF6RKNGujVQY.gif)
 
-I wanted/needed, to push myself, and honestly, the homework was a bit to simple for me. Therefore, I took to heart the concepts of the homework, distilled what I hope you were looking for and then pushed it farther. I hope this is ok, I learned alot.
+I wanted to do something a little different. I wanted to meet all the goals, produce a unique application that would not be copypasta, and show that I can back engineer like no body's buisness, besides just coding and regurgitating. Therefore, I took to heart the concepts of the homework, distilled, what I hope were the skills you were looking for, implemented those, and pushed it farther. I learned alot and also had a ton of fun.
 
 Here's how I met the project goals:
 
@@ -79,16 +78,18 @@ The game restarts after the user clicks on an X (bomb). If the user clicks twice
 ![Sweepit](https://i.giphy.com/media/l3V0GQMoaDLVbjXEI/giphy.webp)
 
 Mine sweeper was an old game that shipped with an older version of Windows.  It's one of my wife's favorite games :D
-It has a few differences. It had a timer, and it had levels. I could implement those, with more time.
+It has a few differences. It has a timer, and it has levels. I could implement those, with more time. However, not having them makes us different, I'm also sure the way I calculate adjacent bombs is intentionally buggy a bit... but NOT by very much... 
 
 ## Bomb Algorhythm
 
 ![BombsAway](https://78.media.tumblr.com/e4f99ef7ef7f658eb15fb8f5f97e1bf4/tumblr_nlyh5eTUBX1sa11jco1_540.gif)
 
-This part is the pretty cool, in my opinion. The way the bombs and numbers are generated is as follows.  The grid is 9 by 9 so there are 81 squares.  Step 1 is to distribute the bombs randomly. This is done with a map function and the random function simply feeding into an array of 81 when the random number is over some value.  
+This part is the pretty cool, in my opinion. The way the bombs and numbers are generated as follows.  The array the data is stored in for the game is actually just a 1 dimensional array. However it can be imagined as a 9 by 9 board, so there are 81 squares 9x9.  Step 1 is to distribute the bombs randomly. This is done with a map function and the random function simply feeding into the line array of 81 when the random number is over some value.  
 
 Step 2 is to go square by square, ignoring bomb squares. In each square you count all the bombs in the adjacent squares to get the number for that square. This is done rapidly by using array math based on a line of 9 squares. So -1, +1, -8, +8, -9, +9, -10, +10 ... etc... 
 
-Currently, the first and last few squares aren't smart enough to count all their adjacent squares (could use modulus to fix this). However, It's a feature... :P I honestly, could fix it, but it makes the game a bit harder and different than the original and I like that.  If you've read this far... you should easily get high score now... 
+Currently, the first and last few squares aren't smart enough to count all their adjacent squares (could use modulus to fix this). However, It's a feature!!!... :P I honestly, could fix it, but it makes the game a bit harder and different than the original and I like that.  If you've read this far... you should easily get high score now... 
+
+In the future I may fix the bug and add "another" one to keep my game unique, who knows!
 
 Good Luck!
