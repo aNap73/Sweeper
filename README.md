@@ -1,5 +1,8 @@
-# Ant Sweeper
+# Ant Sweeper 
+#### Truly, now have I, set you up the bomb....
 ![SITEGIF](https://shielded-wildwood-17962.herokuapp.com/DaBomb.gif)
+
+
 
 [Live Site Here](https://shielded-wildwood-17962.herokuapp.com/)
 
