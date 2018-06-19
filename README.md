@@ -86,12 +86,16 @@ It has a few differences. It has a timer, and it has levels. I could implement t
 
 ![BombsAway](https://78.media.tumblr.com/e4f99ef7ef7f658eb15fb8f5f97e1bf4/tumblr_nlyh5eTUBX1sa11jco1_540.gif)
 
-This part is the pretty cool, in my opinion. The way the bombs and numbers are generated as follows.  The array the data is stored in for the game is actually just a 1 dimensional array. However it can be imagined as a 9 by 9 board, so there are 81 squares 9x9.  Step 1 is to distribute the bombs randomly. This is done with a map function and the random function simply feeding into the line array of 81 when the random number is over some value.  
+This part is pretty cool, in my opinion. The way the bombs and numbers are generated are as follows.  The array the data is stored in for the game is actually just a 1 dimensional array. 
 
-Step 2 is to go square by square, ignoring bomb squares. In each square you count all the bombs in the adjacent squares to get the number for that square. This is done rapidly by using array math based on a line of 9 squares. So -1, +1, -8, +8, -9, +9, -10, +10 ... etc... 
+However it can be imagined as a 9 by 9 board, so there are 81 squares 9x9.  
 
-Currently, the first and last few squares aren't smart enough to count all their adjacent squares (could use modulus to fix this). However, It's a feature!!!... :P I honestly, could fix it, but it makes the game a bit harder and different than the original and I like that.  If you've read this far... you should easily get high score now... 
+Step 1 is to distribute the bombs randomly. This is done with a map function that randomly returns an 'X' based on rng.
 
-In the future I may fix the bug and add "another" one to keep my game unique, who knows!
+Step 2 is to map all non X squares, to the value of the count of adjacent bombs. This is done by using offsets into the array to quickly discovered bombs. So at the current square's index we check the array at positions -1, +1, -8, +8, -9, +9, -10, +10 counting any X's found and leaving that number in the current square.
 
-Good Luck!
+Bug/Feature!
+
+Currently, the first and last few squares aren't smart enough to count all their adjacent squares as there is no -10,-9 or -8 at i position 0 etc, and the same for position 80 +1, +8 etc... However, It's a feature!!!... :P I honestly, could fix it, but it makes the game a bit harder and different than the original and I like that.  And iff you've read this far... you should easily get a high score now than someone who hasn't! 
+
+Good Luck and Enjoy!
