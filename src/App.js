@@ -27,7 +27,7 @@ const getBoardArray = () => {
     cont.forEach(function(obj,q){
       if(obj===''){
         cnt=0;
-        let i = q;
+        let i = 0;
         i=q+1; //R 
         if(cont[(i)%nMod]==='X'){
           cnt ++;
@@ -44,19 +44,19 @@ const getBoardArray = () => {
         if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-        i=q+-1; //D 
+        i=q+nMod-1; //D 
         if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-        i=q+-8; //LD 
+        i=q+nMod-8; //LD 
         if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-        i=q+-9; //L 
+        i=q+nMod-9; //L 
         if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-        i=q+-10; //UL 
+        i=q+nMod-10; //UL 
         if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
