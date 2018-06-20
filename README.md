@@ -5,6 +5,8 @@
 
 Ant Sweeper is my take on an old game called Mine Sweeper. It seemed to fit this assignment well, and I've never coded it before. It was fun to back engineer this one from my memory of it's rules.
 
+It is written entirely in React.js and has no back end at the moment. It's just a view with no controller or model if you will.
+
 [Live Site Here](https://shielded-wildwood-17962.herokuapp.com/)
 
 ## How to Play
