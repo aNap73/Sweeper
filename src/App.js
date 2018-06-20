@@ -174,35 +174,32 @@ class Board extends React.Component {
     let contstyle = {};
     if(this.state.viewstate!=="gameon"&&this.state.viewstate!=="start"){
       contstyle = {backgroundImage: 'url("https://i.giphy.com/media/oe33xf3B50fsc/giphy.webp")', 
-      'max-width': '15%',
-    
+      
       backgroundRepeat: 'no-repeat',    
       backgroundPosition: 'contain',
-      'background-size':  '48% 120%',
+      'background-size':  '100% 100%',
      
-      'min-width': '760px',
-      'margin' : 'auto',
+      
   
     }
     }else{
-      contstyle = {backgroundImage: 'url("https://i.giphy.com/media/WWYSFIZo4fsLC/giphy.webp")', 
-      'max-width': '15%',
+      
+    contstyle = {backgroundImage: 'url("https://i.giphy.com/media/WWYSFIZo4fsLC/giphy.webp")', 
+      
     
       backgroundRepeat: 'no-repeat',    
       backgroundPosition: 'contain',
-      'background-size':  '48% 120%',
+      'background-size':  '100% 150%',
      
-      'min-width': '760px',
-      'margin' : 'auto',
-    
 
        
-    }
+    } 
+     
   } 
     
     return (
-      
-      <div className="container maincont" style={contstyle}>      
+      <div className="container iJustCont">
+      <div className="container-fluid maincont" style={contstyle}>      
         <div className="row">
           <div className="col-12">
             {hiscre}<br/>
@@ -259,6 +256,7 @@ class Board extends React.Component {
           {this.renderSquareRow(72)}
         </div>
         </div>
+      </div>
       </div>
     );
   }

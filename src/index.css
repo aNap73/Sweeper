@@ -12,21 +12,25 @@ body {
  
 }
 
-.submain{
-  
-  margin-top: 300px;
-  background-color: tan;
-  
+.iJustCont{
+ position: fixed;
+ width: 100%;
+ margin: 0;
+}
+.maincont{
+ width: 100%;
+ 
+ position: relative;
+ margin: 0, auto;
+ min-width: 280px;
 }
 .square {
   height: 10%;
-  width: 5%;
-  max-height: 55px;
-  max-width: 75px;
-  min-height: 25px;
-  min-width: 25px;
+  width: 11%;
+  min-height: 24px;
+  min-width: 18px;
   background-color: blue;
-  opacity: .7;
+  opacity: .5;
   font-size: .6em;
  
  
