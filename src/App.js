@@ -173,14 +173,14 @@ class Board extends React.Component {
     
     }
     let contstyle = {};
-    console.log('try it:' + window.screen.orientation);
+    
     if(this.state.viewstate!=="gameon"&&this.state.viewstate!=="start"){
       contstyle = {backgroundImage: 'url("https://i.giphy.com/media/oe33xf3B50fsc/giphy.webp")', 
       
       backgroundRepeat: 'no-repeat',    
       backgroundPosition: 'contain',
       'backgroundSize':  '100% 100%',
-     
+      
       
   
     }
@@ -257,6 +257,11 @@ class Board extends React.Component {
         <div className="col-12">
           {this.renderSquareRow(72)}
         </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            written by: Anthony Napolitano 06/18/2018
+          </div>
         </div>
       </div>
       </div>
