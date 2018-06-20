@@ -138,6 +138,7 @@ class Board extends React.Component {
   renderSquare(i) {
     return (
       <Square
+        key={i}
         value={this.state.squares[i]}
         onClick={() => this.handleClick(i)}
         />
@@ -172,12 +173,13 @@ class Board extends React.Component {
     
     }
     let contstyle = {};
+    console.log('try it:' + window.screen.orientation);
     if(this.state.viewstate!=="gameon"&&this.state.viewstate!=="start"){
       contstyle = {backgroundImage: 'url("https://i.giphy.com/media/oe33xf3B50fsc/giphy.webp")', 
       
       backgroundRepeat: 'no-repeat',    
       backgroundPosition: 'contain',
-      'background-size':  '100% 100%',
+      'backgroundSize':  '100% 100%',
      
       
   
@@ -189,7 +191,7 @@ class Board extends React.Component {
     
       backgroundRepeat: 'no-repeat',    
       backgroundPosition: 'contain',
-      'background-size':  '100% 150%',
+      'backgroundSize':  '100% 150%',
      
 
        

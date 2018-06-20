@@ -6,14 +6,16 @@ body {
   color: white;
   
 }
-
+.navbar{
+  width:100%;
+}
 .menunav{
   background: linear-gradient(rgb(170,170,170), rgb(255,255,255));
  
 }
 
 .iJustCont{
- position: fixed;
+ position: relative;
  width: 100%;
  margin: 0;
 }
