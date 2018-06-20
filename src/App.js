@@ -1,6 +1,9 @@
 import React from 'react';
 import './index.css';
 
+const cheatOn = {cheat:'yes'}
+//const nMod = 81;
+const nMod = 256;
 class Square extends React.Component {
   render() {
     return (
@@ -17,42 +20,49 @@ class Square extends React.Component {
 
 const getBoardArray = () => {
   let cont = Array(81).fill('');
-    let cnt = 0;
+  let cnt = 0;
+    
+    
     cont = cont.map(x=>(Math.random()>.78)?'X':'');
-    cont.forEach(function(obj,i){
+    cont.forEach(function(obj,q){
       if(obj===''){
         cnt=0;
-        if(cont[i+1]==='X'){
+        let i = q;
+        i=q+1; //R 
+        if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-        if(cont[i+8]==='X'){
+        i=q+8; //RD
+        if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-        
-        if(cont[i+9]==='X'){
+        i=q+9; //RD
+        if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-        if(cont[i+10]==='X'){
+        i=q+10; //RD
+        if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-
-
-        if(cont[i-10]==='X'){
+        i=q+-1; //D 
+        if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-        if(cont[i-9]==='X'){
+        i=q+-8; //LD 
+        if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-        if(cont[i-8]==='X'){
+        i=q+-9; //L 
+        if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
-
-        if(cont[i-1]==='X'){
+        i=q+-10; //UL 
+        if(cont[(i)%nMod]==='X'){
           cnt ++;
         }
 
         //if(cnt>0){
-          cont[i] = cnt.toString();
+        cont[q] = cnt.toString();
         //}        
       }
     });
@@ -78,6 +88,7 @@ class Board extends React.Component {
       
       const contents = this.state.contents.slice();
       const squares = this.state.squares.slice();
+      
       if(this.state.viewstate==="gameover"){
         let screh=this.state.highscore;
         if(this.state.highscore<=this.state.score){
@@ -99,13 +110,23 @@ class Board extends React.Component {
         const b = getBoardArray();
         
         
-        this.setState({ 
-                        score: 0,
+        this.setState({ score: 0,
                         contents: b,
                         viewstate:"gameon"});        
       }
       if(this.state.viewstate==="gameon"){
-      
+        
+        if(cheatOn.cheat==='yes'){
+          let o = 0;
+          for(;o<81;o++){
+            squares[o] = contents[o];
+            
+            
+          }
+          this.setState({squares: squares});
+          return cheatOn.cheat='no';
+        }
+
         if(this.state.contents[i] === 'X'){
           squares[i] = 'X';
           return this.setState({squares:squares, viewstate:"gameover"});        
