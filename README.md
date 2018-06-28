@@ -11,7 +11,7 @@ It is written entirely in React.js and has no back end at the moment. It's just 
 
 ## Site Updates 06.28.2018 Ant Sweeper promoted to X Sweeper...
 
-I am using Ant Sweeper as the place holder site for [http://OldSchoolsFreeGames.com](http://oldschoolsfreegames.com) at the moment it just a redirect, but is a work in progress.
+I am using Ant Sweeper as the place holder site for [OldSchoolsFreeGames.com](http://oldschoolsfreegames.com) at the moment it just a redirect, but is a work in progress.
 
 So in a way it's been promoted!
 
