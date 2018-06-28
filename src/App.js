@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-const cheatOn = {cheat:'yes'}
+const cheatOn = {cheat:'no'}
 const nMod = 81;
 // const nMod = 256;
 class Square extends React.Component {
