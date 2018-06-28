@@ -11,13 +11,17 @@ It is written entirely in React.js and has no back end at the moment. It's just 
 
 ## Site Updates 06.28.2018 Ant Sweeper promoted to X Sweeper...
 
-I am using Ant Sweeper as the place holder site for [OldSchoolsFreeGames.com](oldschoolsfreegames.com) at the moment.
+I am using Ant Sweeper as the place holder site for [http://OldSchoolsFreeGames.com](http://oldschoolsfreegames.com) at the moment. It's just a horrific redirect atm, but working on it...
 
 So in a way it's been promoted!
+
+I will upgrade the http to https when necessary, which is not now...
+as this game may not even be on the prod site.
 
 Since it is a game, and it is free... it works for now :D, it also "WORKS FOR NOW" I've set the edge modulus correctly while there may be folks checking it out. I feel like I sold out a little but, for free... great... I may change settings at will thou so who knows... ;)
 
 Wouldn't want to dissapoint ... ummnn friends and family :D and instructors etc...
+
 
 
 ## How to Play
