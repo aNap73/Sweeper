@@ -1,9 +1,9 @@
 import React from 'react';
 import './index.css';
 
-const cheatOn = {cheat:'no'}
-//const nMod = 81;
-const nMod = 256;
+const cheatOn = {cheat:'yes'}
+const nMod = 81;
+// const nMod = 256;
 class Square extends React.Component {
   render() {
     return (
@@ -281,7 +281,7 @@ class Board extends React.Component {
         </div>
         <div className="row">
           <div className="col-12">
-            written by: Anthony Napolitano 06/18/2018
+            Coming SOON Old Schools Free Games... 
           </div>
         </div>
       </div>
