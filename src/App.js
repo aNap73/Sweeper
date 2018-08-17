@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
-
+import BlueSky from './assets/BlueSt.gif'
+import RedSky from './assets/Boom.gif'
 const cheatOn = {cheat:'no'}
 const nMod = 81;
 // const nMod = 256;
@@ -196,7 +197,7 @@ class Board extends React.Component {
     let contstyle = {};
     
     if(this.state.viewstate!=="gameon"&&this.state.viewstate!=="start"){
-      contstyle = {backgroundImage: 'url("https://i.giphy.com/media/oe33xf3B50fsc/giphy.webp")', 
+      contstyle = {backgroundImage: `url(${RedSky})`, 
       
       backgroundRepeat: 'no-repeat',    
       backgroundPosition: 'contain',
@@ -206,8 +207,8 @@ class Board extends React.Component {
   
     }
     }else{
-      
-    contstyle = {backgroundImage: 'url("https://i.giphy.com/media/WWYSFIZo4fsLC/giphy.webp")', 
+     
+    contstyle = {backgroundImage: `url(${BlueSky})` , 
       
     
       backgroundRepeat: 'no-repeat',    
